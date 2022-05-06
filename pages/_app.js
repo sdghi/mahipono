@@ -2,8 +2,10 @@ import Link from "next/link";
 import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { linkResolver, repositoryName } from "../prismic";
+import { createClient } from "../prismic";
+import Header from "@/components/Header";
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps, navigation }) {
 	return (
 		<PrismicProvider
 			linkResolver={linkResolver}
@@ -14,8 +16,15 @@ export default function App({ Component, pageProps }) {
 			)}
 		>
 			<PrismicPreview repositoryName={repositoryName}>
+				<Header navigation={navigation} />
 				<Component {...pageProps} />
 			</PrismicPreview>
 		</PrismicProvider>
 	);
 }
+
+App.getInitialProps = async ({ previewData }) => {
+	const client = createClient({ previewData });
+	const navigation = await client.getSingle("navigation");
+	return { navigation: navigation.data.body };
+};
