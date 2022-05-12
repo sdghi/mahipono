@@ -1,40 +1,41 @@
 import { PrismicRichText, PrismicLink } from "@prismicio/react";
+import getClassNames from "@/helpers/getClassNames";
 
 export default function TextSection({ slice }) {
-	console.log("slice", slice);
+	const {
+		alignment,
+		content_width,
+		title,
+		content,
+		cta_content,
+		cta_link,
+		illustration_placement,
+	} = slice.primary;
+
+	const sliceStyles = getClassNames("text-section", {
+		alignment,
+		width: content_width,
+	});
 
 	return (
-		<div
-			className={`text-section ${
-				slice.primary.alignment
-					? `text-section--${slice.primary.alignment}`
-					: ""
-			} ${
-				slice.primary.content_width
-					? `text-section--${slice.primary.content_width}`
-					: ""
-			}
-				`}
-		>
+		<div className={sliceStyles}>
 			<div className="text-section__wrapper">
-				<h2 className="text-section__title">
-					{slice.primary.title[0].text}
-				</h2>
-				<PrismicRichText field={slice.primary.content} />
-				{slice.primary.cta_content[0] && (
+				<h2 className="text-section__title">{title[0].text}</h2>
+				<PrismicRichText field={content} />
+				{cta_content[0] && (
 					<PrismicLink
-						field={slice.primary.cta_link}
+						field={cta_link}
 						className="text-section__link"
 					>
-						{slice.primary.cta_content[0].text}
+						{cta_content[0].text}
 					</PrismicLink>
 				)}
 			</div>
 
 			<img
-				className={`text-section-illustration text-section-illustration--${slice.primary.illustration_placement}`}
+				className={`text-section-illustration text-section-illustration--${illustration_placement}`}
 				src={
-					slice.primary.illustration_placement === "left"
+					illustration_placement === "left"
 						? "/illustrations/mountain.svg"
 						: "/illustrations/mountain-right.svg"
 				}
