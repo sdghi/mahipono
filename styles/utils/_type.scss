@@ -1,0 +1,38 @@
+@use "utils/colors";
+
+@mixin type($size, $line-height, $letter-spacing: 0, $font-weight: 400) {
+	font-size: $size;
+	font-weight: $font-weight;
+	line-height: $line-height;
+	letter-spacing: $letter-spacing;
+	color: var(--text-color, colors.$brown-100);
+}
+
+@mixin heading-two {
+	@include type(36px, 43px, 0.04em);
+	font-family: var(--font-heading);
+}
+
+@mixin heading-three {
+	@include type(29px, 35px, 0.15em, 700);
+}
+
+@include body {
+	@include type(20px, 32px);
+}
+
+@include body-large {
+	@include type(28px, 40px);
+}
+
+@include body-large-bold {
+	@include type(28px, 40px, 0, 700);
+}
+
+@include accoridon-text {
+	@include type(22px, 40px, 0, 600);
+}
+
+@include newspost-feed-title {
+	@include type(22px, 30px, 0, 700);
+}
