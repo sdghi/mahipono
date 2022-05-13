@@ -1,0 +1,24 @@
+@use "utils/breakpoints";
+@use "utils/colors";
+@use "utils/type";
+@use "utils/easings";
+
+@mixin button {
+	--button-padding: 20px 12px;
+	--button-background: #{colors.$yellow-200};
+	@include type.link;
+	display: block;
+	width: fit-content;
+	padding: var(--button-padding);
+	background: var(--button-background);
+	color: colors.$white;
+	transition: background 0.2s easings.$ease-in-out-sine;
+
+	&:hover {
+		--button-background: rgb(255, 196, 0);
+	}
+
+	@include breakpoints.tablet {
+		--button-padding: 23px;
+	}
+}

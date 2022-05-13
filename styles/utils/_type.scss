@@ -24,12 +24,36 @@
 }
 
 @mixin heading-two {
-	@include type(36px, 43px, 0.04em);
+	--font-size: 20px;
+	--line-height: 28px;
+	@include type(var(--font-size), var(--line-height), 0.04em);
 	font-family: var(--font-heading);
+
+	@include breakpoints.laptop {
+		--font-size: 28px;
+		--line-height: 32px;
+	}
+
+	@include breakpoints.desktop {
+		--font-size: 36px;
+		--line-height: 43px;
+	}
 }
 
 @mixin heading-three {
-	@include type(29px, 35px, 0.15em, 700);
+	--font-size: 20px;
+	--line-height: 28px;
+	@include type(var(--font-size), var(--line-height), 0.15em, 700);
+	font-family: var(--font-heading);
+
+	@include breakpoints.laptop {
+		--font-size: 23px;
+		--line-height: 32px;
+	}
+}
+
+@mixin heading-four {
+	@include type(24px, 29px, 0.15em, 700);
 }
 
 @mixin body {
