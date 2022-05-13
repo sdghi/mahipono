@@ -17,22 +17,34 @@
 	@include type(29px, 35px, 0.15em, 700);
 }
 
-@include body {
+@mixin body {
 	@include type(20px, 32px);
 }
 
-@include body-large {
+@mixin body-large {
 	@include type(28px, 40px);
 }
 
-@include body-large-bold {
+@mixin body-large-bold {
 	@include type(28px, 40px, 0, 700);
 }
 
-@include accoridon-text {
+@mixin accoridon-text {
 	@include type(22px, 40px, 0, 600);
 }
 
-@include newspost-feed-title {
+@mixin newspost-feed-title {
 	@include type(22px, 30px, 0, 700);
+}
+
+@mixin link-small {
+	@include type(13px, 1, 0.1em, 700);
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+@mixin link {
+	@include type(16px, 1, 0.12em, 700);
+	text-transform: uppercase;
+	text-decoration: none;
 }
