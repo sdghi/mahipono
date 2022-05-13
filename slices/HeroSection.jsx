@@ -1,5 +1,6 @@
 export default function HeroSection({ slice }) {
 	const { hero_image, center_title, hero_text } = slice.primary;
+
 	return (
 		<div className="hero-section">
 			<img
@@ -11,8 +12,8 @@ export default function HeroSection({ slice }) {
 				{hero_text && (
 					<h1
 						className={
-							center_title
-								? "hero-section__title--centered"
+							center_title === "true"
+								? "hero-section__title hero-section__title--centered"
 								: "hero-section__title"
 						}
 					>
