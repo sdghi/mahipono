@@ -54,6 +54,7 @@
 
 @mixin heading-four {
 	@include type(24px, 29px, 0.15em, 700);
+	text-transform: uppercase;
 }
 
 @mixin body {
