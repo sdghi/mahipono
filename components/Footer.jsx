@@ -16,7 +16,7 @@ export default function Footer() {
 				<div className="footer__wrapper__social">
 					<a
 						className="footer__wrapper__social__link"
-						href=""
+						href="https://www.instagram.com/mahipono/"
 						target="_blank"
 						aria-label="Visit our Instagram"
 					>
@@ -28,7 +28,7 @@ export default function Footer() {
 					</a>
 					<a
 						className="footer__wrapper__social__link"
-						href=""
+						href="https://www.facebook.com/mahipono/"
 						target="_blank"
 						aria-label="Visit our Facebook"
 					>
