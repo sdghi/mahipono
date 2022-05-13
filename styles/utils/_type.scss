@@ -1,3 +1,4 @@
+@use "utils/breakpoints";
 @use "utils/colors";
 
 @mixin type($size, $line-height, $letter-spacing: 0, $font-weight: 400) {
@@ -6,6 +7,20 @@
 	line-height: $line-height;
 	letter-spacing: $letter-spacing;
 	color: var(--text-color, colors.$brown-100);
+}
+
+@mixin heading-one {
+	--font-size: 20px;
+	@include type(var(--font-size), 1, 0.04em);
+	font-family: var(--font-heading);
+
+	@include breakpoints.tablet {
+		--font-size: 60px;
+	}
+
+	@include breakpoints.desktop {
+		--font-size: 80px;
+	}
 }
 
 @mixin heading-two {
