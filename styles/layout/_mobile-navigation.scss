@@ -1,0 +1,51 @@
+@use "utils/breakpoints";
+@use "utils/colors";
+@use "utils/easings";
+@use "utils/type";
+
+.mobile-navigation {
+	--translate: translateY(-100%);
+	--slide-easing: #{easings.$ease-in-sine};
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+	background: colors.$brown-100;
+	transform: var(--translate);
+	transition: transform 0.25s var(--slide-easing);
+
+	&--visible-true {
+		--translate: translateY(0);
+		--slide-easing: #{easings.$ease-out-sine};
+	}
+
+	@include breakpoints.laptop {
+		display: none;
+	}
+}
+
+.mobile-navigation__items {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.mobile-navigation__items__item {
+	border-top: 1px solid colors.$white;
+}
+
+.mobile-navigation__items__item__link {
+	--text-color: #{colors.$white};
+	@include type.link;
+	display: block;
+	text-align: center;
+	// Keep all these padding properties here
+	padding: var(--header-padding);
+	padding-top: 22px;
+	padding-bottom: 22px;
+
+	&:hover {
+		background: colors.$yellow-200;
+	}
+}
