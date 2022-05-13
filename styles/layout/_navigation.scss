@@ -1,0 +1,36 @@
+@use "utils/breakpoints";
+@use "utils/colors";
+@use "utils/easings";
+@use "utils/type";
+
+.navigation {
+	display: none;
+
+	@include breakpoints.laptop {
+		display: block;
+	}
+}
+
+.navigation__items {
+	--items-gap: 25px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	gap: var(--items-gap);
+
+	@include breakpoints.desktop {
+		--items-gap: 46px;
+	}
+}
+
+.navigation__items__item__link {
+	--text-color: #{colors.$white};
+	@include type.link-small;
+	text-decoration: none;
+	transition: color 0.2s easings.$ease-in-out-sine;
+
+	&:hover {
+		--text-color: #{colors.$yellow-200};
+	}
+}
