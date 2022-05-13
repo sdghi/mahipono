@@ -1,0 +1,47 @@
+@use "utils/breakpoints";
+@use "utils/colors";
+@use "utils/type";
+
+.footer__banner {
+	background: colors.$yellow-300;
+}
+
+.footer__banner__illustration {
+	margin-right: 0;
+	margin-left: auto;
+	padding-top: 115px;
+}
+
+.footer__wrapper {
+	background: colors.$brown-200;
+	padding: 32px 52px;
+	display: grid;
+	grid-gap: 10px;
+
+	@include breakpoints.tablet {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas: ". content social";
+		align-items: center;
+	}
+}
+
+.footer__wrapper__content {
+	--text-color: #{colors.$white};
+	@include type.body;
+	text-align: center;
+
+	@include breakpoints.tablet {
+		grid-area: content;
+	}
+}
+
+.footer__wrapper__social {
+	display: flex;
+	gap: 38px;
+	justify-self: center;
+
+	@include breakpoints.tablet {
+		grid-area: social;
+		justify-self: end;
+	}
+}
