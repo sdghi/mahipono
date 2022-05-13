@@ -8,7 +8,6 @@ export default function Home({ page }) {
 	return (
 		<>
 			<Meta title={page_title[0].text} />
-			<h1>{page_title[0].text}</h1>
 			<SliceZone slices={body} components={components} />
 		</>
 	);
