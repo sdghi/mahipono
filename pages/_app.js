@@ -4,6 +4,7 @@ import { PrismicPreview } from "@prismicio/next";
 import { linkResolver, repositoryName } from "../prismic";
 import { createClient } from "../prismic";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "styles/styles.scss";
 
 export default function App({ Component, pageProps, navigation }) {
@@ -19,6 +20,7 @@ export default function App({ Component, pageProps, navigation }) {
 			<PrismicPreview repositoryName={repositoryName}>
 				<Header navigation={navigation} />
 				<Component {...pageProps} />
+				<Footer />
 			</PrismicPreview>
 		</PrismicProvider>
 	);
