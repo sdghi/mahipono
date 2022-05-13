@@ -1,0 +1,41 @@
+@use "utils/breakpoints";
+@use "utils/colors";
+@use "utils/easings";
+
+.header {
+	--header-padding: 13px 15px;
+	position: sticky;
+	z-index: 60;
+	top: 0;
+	left: 0;
+}
+
+.header__wrapper {
+	background: colors.$brown-100;
+	color: colors.$white;
+	padding: var(--header-padding);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.header__mobile-nav-toggle {
+	background: transparent;
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+	svg {
+		display: block;
+
+		rect {
+			transition: all 0.2s easings.$ease-in-out-sine;
+			transform-origin: center;
+		}
+	}
+
+	@include breakpoints.laptop {
+		display: none;
+	}
+}
