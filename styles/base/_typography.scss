@@ -1,3 +1,9 @@
+@use "utils/type";
+
 body {
 	font-family: var(--font-body);
+}
+
+p {
+	@include type.body;
 }
