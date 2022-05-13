@@ -1,0 +1,78 @@
+@use "utils/breakpoints";
+@use "utils/colors";
+@use "utils/helpers";
+@use "utils/type";
+
+.ic {
+	padding: 60px 0 144px 0;
+}
+
+.ic__wrapper {
+	--container-max-width: 260px;
+	@include helpers.push-auto;
+
+	width: 90%;
+	max-width: var(--container-max-width);
+
+	@include breakpoints.tablet {
+		--container-max-width: 1042px;
+	}
+
+	@include breakpoints.desktop {
+		--container-max-width: 1407px;
+	}
+}
+
+.ic__title {
+	@include type.heading-two;
+	text-align: center;
+}
+
+.ic__items {
+	--items-grid-gap: 40px;
+	margin-top: 50px;
+	display: grid;
+	grid-gap: var(--items-grid-gap);
+
+	@include breakpoints.tablet {
+		margin-top: 70px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include breakpoints.laptop {
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 97px;
+	}
+
+	@include breakpoints.desktop {
+		grid-gap: 185px;
+	}
+}
+
+.ic__items__item {
+	text-align: center;
+}
+
+.ic__items__item__image {
+	--image-height: 74px;
+	@include helpers.push-auto;
+	height: var(--image-height);
+	width: auto;
+
+	@include breakpoints.laptop {
+		--image-height: 101px;
+	}
+
+	@include breakpoints.desktop {
+		--image-height: 115px;
+	}
+}
+
+.ic__items__item__title {
+	@include type.heading-four;
+	margin-top: 30px;
+}
+
+.ic__items__item__body {
+	margin-top: 13px;
+}
