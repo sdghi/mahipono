@@ -1,7 +1,7 @@
 import { SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 import { createClient, linkResolver } from "../prismic";
-import Meta from "@/components/meta";
+import Meta from "@/components/Meta";
 import { components } from "@/slices/index";
 
 export default function Page({ page }) {
