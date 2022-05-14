@@ -2,7 +2,6 @@ import { PrismicRichText } from "@prismicio/react";
 import getClassNames from "@/helpers/getClassNames";
 
 export default function EmbedWithText({ slice }) {
-	console.log("slice", slice);
 	const {
 		embed_placement,
 		embed,
