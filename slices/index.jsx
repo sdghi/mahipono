@@ -3,6 +3,7 @@ import EmbedWithText from "@/slices/EmbedWithText";
 import IllustrationCollection from "@/slices/IllustrationCollection";
 import TextSection from "@/slices/TextSection";
 import ImageWithText from "@/slices/ImageWithText";
+import Accordion from "@/slices/Accordion";
 
 export { HeroSection };
 
@@ -12,4 +13,5 @@ export const components = {
 	embed_with_text: EmbedWithText,
 	illustration_collection: IllustrationCollection,
 	image_with_text: ImageWithText,
+	accordian: Accordion,
 };
