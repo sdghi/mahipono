@@ -1,0 +1,78 @@
+@use "utils/breakpoints";
+@use "utils/colors";
+@use "utils/components";
+@use "utils/type";
+@use "utils/helpers";
+
+.embed-with-text {
+	--content-background: #{colors.$green-300};
+	--flex-direction: row;
+
+	&--embed-left {
+		--flex-direction: row-reverse;
+	}
+
+	&--background-medium {
+		--content-background: #{colors.$green-200};
+	}
+
+	&--background-light {
+		--content-background: #{colors.$green-100};
+	}
+}
+
+.embed-with-text__wrapper {
+	@include breakpoints.laptop {
+		display: flex;
+		flex-direction: var(--flex-direction);
+	}
+}
+
+.embed-with-text__embed-container {
+	flex-basis: 66.66%;
+}
+
+.embed-with-text__embed-container iframe {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	min-height: 500px;
+	max-height: 741px;
+}
+
+.embed-with-text__main {
+	flex-basis: 33.33%;
+	background: var(--content-background);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 322px;
+}
+
+.embed-with-text__content {
+	@include helpers.push-auto;
+	max-width: 456px;
+	text-align: center;
+	padding: 20px;
+}
+
+.embed-with-text__content__title {
+	--text-color: #{colors.$white};
+	@include type.heading-three;
+}
+
+.embed-with-text__content__body {
+	--text-color: #{colors.$white};
+	@include type.body;
+	margin-top: 30px;
+}
+
+.embed-with-text__content__link {
+	@include components.button;
+	@include helpers.push-auto;
+	margin-top: 16px;
+
+	@include breakpoints.tablet {
+		margin-top: 24px;
+	}
+}
