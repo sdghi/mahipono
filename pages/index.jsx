@@ -1,6 +1,6 @@
 import { SliceZone } from "@prismicio/react";
 import { createClient } from "../prismic";
-import Meta from "@/components/Meta";
+import Meta from "@/components/meta";
 import { components } from "@/slices/index";
 
 export default function Home({ page }) {
