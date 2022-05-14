@@ -2,7 +2,6 @@ import { PrismicRichText } from "@prismicio/react";
 import getClassNames from "@/helpers/getClassNames";
 
 export default function IllustrationCollection({ slice }) {
-	console.log("slice", slice);
 	const { title, grid_gap } = slice.primary;
 
 	const classNames = getClassNames("ic", {

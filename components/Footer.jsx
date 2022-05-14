@@ -18,6 +18,7 @@ export default function Footer() {
 						className="footer__wrapper__social__link"
 						href="https://www.instagram.com/mahipono/"
 						target="_blank"
+						rel="noreferrer"
 						aria-label="Visit our Instagram"
 					>
 						<img
@@ -30,6 +31,7 @@ export default function Footer() {
 						className="footer__wrapper__social__link"
 						href="https://www.facebook.com/mahipono/"
 						target="_blank"
+						rel="noreferrer"
 						aria-label="Visit our Facebook"
 					>
 						<img
