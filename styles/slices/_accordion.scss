@@ -36,11 +36,12 @@
 
 .accordion__items__item__question {
 	--text-color: #{colors.$black};
-	@include type.type(17px, 1, 0, 600);
+	@include type.type(17px, 1.25, 0, 600);
 	cursor: pointer;
 	list-style: none;
 	display: flex;
 	align-items: center;
+	gap: 20px;
 	justify-content: space-between;
 }
 
