@@ -15,8 +15,10 @@ export default function Header({ navigation }) {
 		<>
 			<header className="header">
 				<div className="header__wrapper">
-					<Link href="/" aria-label="Home">
-						<img src="/site-branding.svg" role="presentation" />
+					<Link href="/">
+						<a arial-label="Go to the homepage">
+							<img src="/site-branding.svg" role="presentation" />
+						</a>
 					</Link>
 					<MobileNavToggle
 						toggleMobileNav={toggleMobileNav}
