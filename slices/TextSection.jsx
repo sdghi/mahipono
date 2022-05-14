@@ -34,15 +34,18 @@ export default function TextSection({ slice }) {
 				)}
 			</div>
 
-			<img
-				className={`text-section-illustration text-section-illustration--${illustration_placement}`}
-				src={
-					illustration_placement === "left"
-						? "/illustrations/mountain.svg"
-						: "/illustrations/mountain-right.svg"
-				}
-				alt=""
-			/>
+			{illustration_placement !== "none" && (
+				<img
+					className={`text-section-illustration text-section-illustration--${illustration_placement}`}
+					src={
+						illustration_placement === "left"
+							? "/illustrations/mountain.svg"
+							: "/illustrations/mountain-right.svg"
+					}
+					alt=""
+					role="presentation"
+				/>
+			)}
 		</div>
 	);
 }

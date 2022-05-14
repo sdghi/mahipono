@@ -1,9 +1,19 @@
 @use "utils/type";
+@use "utils/colors";
 
 body {
 	font-family: var(--font-body);
+	@include type.body;
 }
 
-p {
-	@include type.body;
+.underline {
+	text-decoration: underline;
+}
+
+.yellow {
+	color: colors.$yellow-200;
+}
+
+.red {
+	color: red;
 }
