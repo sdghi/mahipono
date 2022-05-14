@@ -1,7 +1,6 @@
 import { PrismicRichText } from "@prismicio/react";
 
 export default function Accordion({ slice }) {
-	console.log("slice", slice);
 	const { title } = slice.primary;
 	return (
 		<div className="accordion">
