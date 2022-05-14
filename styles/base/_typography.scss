@@ -17,3 +17,8 @@ body {
 .red {
 	color: red;
 }
+
+p:empty {
+	display: block;
+	margin-top: 15px;
+}
