@@ -31,8 +31,10 @@ export async function getStaticPaths() {
 		return doc.uid !== "home";
 	});
 
+	const paths = filteredDocs.map((doc) => prismicH.asLink(doc, linkResolver));
+
 	return {
-		paths: filteredDocs.map((doc) => prismicH.asLink(doc, linkResolver)),
+		paths,
 		fallback: true,
 	};
 }
