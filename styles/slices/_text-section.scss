@@ -1,0 +1,48 @@
+@use "utils/components";
+@use "utils/helpers";
+
+.text-section {
+	--content-width: 949px;
+	--content-padding: 108px 0 119px 0;
+	--button-margin: 20px 0;
+	position: relative;
+	padding: var(--content-padding);
+	overflow: hidden;
+
+	&--width-small {
+		--content-width: 627px;
+		--content-padding: 84px 0 89px 0;
+	}
+
+	&--alignment-center {
+		--button-margin: 20px auto 0 auto;
+		text-align: center;
+	}
+}
+
+.text-section__wrapper {
+	@include helpers.push-auto;
+	max-width: var(--content-width);
+}
+
+.text-section__content {
+	margin-top: 25px;
+}
+
+.text-section-illustration {
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+	z-index: -1;
+
+	&--right {
+		right: 0;
+		left: auto;
+	}
+}
+
+.text-section__link {
+	@include components.button;
+	@include helpers.push-auto;
+	margin: var(--button-margin);
+}
