@@ -22,3 +22,7 @@ p:empty {
 	display: block;
 	margin-top: 15px;
 }
+
+p a {
+	color: colors.$yellow-200;
+}
