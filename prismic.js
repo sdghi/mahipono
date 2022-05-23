@@ -10,9 +10,9 @@ export function linkResolver(doc) {
 	switch (doc.type) {
 		case "page":
 			if (doc.uid === "home") return "/";
-			return `/${doc.slug}`;
+			return `/${doc.uid}`;
 		default:
-			return `/${doc.slug}`;
+			return `/${doc.uid}`;
 	}
 }
 
