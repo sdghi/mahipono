@@ -23,7 +23,11 @@ export default function TextSection({ slice }) {
 				{title[0] && (
 					<h2 className="text-section__title">{title[0].text}</h2>
 				)}
-				<PrismicRichText field={content} />
+
+				<div className="text-section__content">
+					<PrismicRichText field={content} />
+				</div>
+
 				{cta_content[0] && (
 					<PrismicLink
 						field={cta_link}
