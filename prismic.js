@@ -11,6 +11,8 @@ export function linkResolver(doc) {
 		case "page":
 			if (doc.uid === "home") return "/";
 			return `/${doc.uid}`;
+		case "post":
+			return `/news-and-updates/${doc.slug}`;
 		default:
 			return `/${doc.uid}`;
 	}
