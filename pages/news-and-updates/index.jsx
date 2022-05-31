@@ -4,7 +4,6 @@ import PostTextSnippet from "@/components/PostTextSnippet";
 
 export default function News({ page, posts }) {
 	const { featured_post, page_title } = page.data;
-	console.log(featured_post.data);
 	return (
 		<>
 			<Meta title="News & Updates" />
