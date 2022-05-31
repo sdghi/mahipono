@@ -1,0 +1,19 @@
+@use "utils/helpers";
+@use "utils/type";
+
+.image {
+	@include helpers.push-auto;
+	max-width: 1100px;
+	padding: 50px 20px;
+}
+
+.image__figure__image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.image__figure__caption {
+	@include type.body-small;
+	margin-top: 10px;
+}
