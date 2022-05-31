@@ -20,13 +20,7 @@ export default function PostTextSnippet({ post, prefix }) {
 					{post.tags && (
 						<div className="post__tags">
 							{post.tags.map((tag, i) => (
-								<Link
-									key={i}
-									href={`/tags/${tag
-										.split(" ")
-										.join("-")
-										.toLowerCase()}`}
-								>
+								<Link key={i} href={`/tags/${tag}`}>
 									<a class="post__tags__tag">{tag}</a>
 								</Link>
 							))}

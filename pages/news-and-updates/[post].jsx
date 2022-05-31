@@ -35,13 +35,7 @@ export default function Post({ post }) {
 							<p className="article__tags__title">Tags:</p>
 							<div className="article__tags__container">
 								{post.tags.map((tag, i) => (
-									<Link
-										key={i}
-										href={`/tags/${tag
-											.split(" ")
-											.join("-")
-											.toLowerCase()}`}
-									>
+									<Link key={i} href={`/tags/${tag}`}>
 										<a class="article__tags__tag">{tag}</a>
 									</Link>
 								))}
