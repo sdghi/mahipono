@@ -20,7 +20,7 @@ export default function TextSection({ slice }) {
 	return (
 		<div className={sliceStyles}>
 			<div className="text-section__wrapper">
-				{title[0] && (
+				{title && title[0] && (
 					<h2 className="text-section__title">{title[0].text}</h2>
 				)}
 
@@ -28,7 +28,7 @@ export default function TextSection({ slice }) {
 					<PrismicRichText field={content} />
 				</div>
 
-				{cta_content[0] && (
+				{cta_content && cta_content[0] && (
 					<PrismicLink
 						field={cta_link}
 						className="text-section__link"

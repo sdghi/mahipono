@@ -1,0 +1,85 @@
+@use "utils/colors";
+@use "utils/helpers";
+@use "utils/type";
+
+.article__hero {
+	@include helpers.push-auto;
+	max-width: 1100px;
+	padding: 0 20px;
+}
+
+.article__hero__content {
+	margin-top: 67px;
+	text-align: center;
+}
+
+.article__hero__title {
+	@include type.heading-two;
+}
+
+.article__hero__published {
+	margin-top: 43px;
+	font-size: 15px;
+	color: colors.$grey-200;
+}
+
+.article__hero__image {
+	margin-top: 33px;
+	width: 100%;
+	height: auto;
+}
+
+.article__tags {
+	max-width: 1100px;
+	margin: 40px auto 109px auto;
+}
+
+.article__tags__inner {
+	padding: 0 20px;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.article__tags__title,
+.article__tags__tag {
+	@include type.body-small;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.article__tags__container {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.article__tags__tag {
+	color: colors.$yellow-200;
+	text-decoration: none;
+}
+
+.article__next {
+	position: relative;
+	background: colors.$grey-100;
+}
+
+.article__next__wrapper {
+	@include helpers.push-auto;
+	position: relative;
+	padding: 61px 20px 70px 20px;
+	max-width: 1100px;
+	z-index: 1;
+}
+
+.article__next__title {
+	@include type.heading-four;
+	margin-bottom: 26px;
+}
+
+.article__next__illustration {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+}
