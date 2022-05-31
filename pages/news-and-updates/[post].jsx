@@ -38,7 +38,9 @@ export default function Post({ post, next }) {
 							<div className="article__tags__container">
 								{post.tags.map((tag, i) => (
 									<Link key={i} href={`/tags/${tag}`}>
-										<a class="article__tags__tag">{tag}</a>
+										<a className="article__tags__tag">
+											{tag}
+										</a>
 									</Link>
 								))}
 							</div>
