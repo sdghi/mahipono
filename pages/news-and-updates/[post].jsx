@@ -5,9 +5,11 @@ import Meta from "@/components/Meta";
 import { components } from "@/slices/index";
 import formatDate from "@/helpers/formatDate";
 import Link from "next/link";
+import PostTextSnippet from "@/components/PostTextSnippet";
 
-export default function Post({ post }) {
+export default function Post({ post, next }) {
 	const { title, release_date, source, featured_image, body } = post.data;
+
 	return (
 		<>
 			<Meta title={title[0].text} />
@@ -43,6 +45,22 @@ export default function Post({ post }) {
 						</div>
 					</div>
 				)}
+
+				<div className="article__next">
+					<div className="article__next__wrapper">
+						<h2 className="article__next__title">MORE IN NEWS</h2>
+						<PostTextSnippet
+							post={next}
+							prefix="article__next__post"
+						/>
+					</div>
+					<img
+						className="article__next__illustration"
+						src="/illustrations/mountain.svg"
+						alt=""
+						role="presentation"
+					/>
+				</div>
 			</article>
 		</>
 	);
@@ -57,8 +75,14 @@ export async function getStaticProps({ params, previewData }) {
 		return post.slugs[0] == params.post;
 	})[0];
 
+	let nextIndex = posts.indexOf(post) + 1;
+
+	if (nextIndex > posts.length - 1) {
+		nextIndex = 0;
+	}
+
 	return {
-		props: { post },
+		props: { post, next: posts[nextIndex] },
 	};
 }
 
