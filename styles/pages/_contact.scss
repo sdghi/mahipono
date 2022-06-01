@@ -1,0 +1,83 @@
+@use "utils/breakpoints";
+@use "utils/colors";
+@use "utils/helpers";
+@use "utils/type";
+
+.contact {
+	@include helpers.push-auto;
+	max-width: 1300px;
+	margin-bottom: 120px;
+}
+
+.contact__title {
+	@include type.heading-two;
+	text-align: center;
+	margin-top: 74px;
+}
+
+.contact__wrapper {
+	margin-top: 93px;
+	padding: 0px 20px;
+	display: grid;
+	grid-gap: 62px;
+	width: 100%;
+
+	@include breakpoints.laptop {
+		grid-template-columns: 1fr 731px;
+	}
+}
+
+.contact__content {
+	max-width: 300px;
+	@include breakpoints.laptop {
+		max-width: 100%;
+	}
+}
+
+.contact__content__body {
+	@include type.body-small;
+
+	p + p {
+		margin-top: 1em;
+	}
+}
+
+.contact__embed {
+	min-width: 100%;
+	min-height: 100vh;
+	height: fit-content;
+}
+
+.contact__content__phone {
+	margin-top: 44px;
+}
+
+.contact__content__phone__title,
+.contact__content__social__title {
+	@include type.type(15px, 1.5, 0, 700);
+	text-transform: uppercase;
+	margin-bottom: 7px;
+}
+
+.contact__content__phone__number {
+	@include type.type(26px, 1, 0, 700);
+	color: colors.$brown-100;
+	text-decoration: none;
+}
+
+.contact__content__social {
+	margin-top: 40px;
+}
+
+.contact__content__social__items {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	align-items: center;
+}
+
+.contact__content__social__items__item img {
+	display: block;
+	height: 20px;
+	width: auto;
+}
