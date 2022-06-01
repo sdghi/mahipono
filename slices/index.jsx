@@ -5,6 +5,7 @@ import TextSection from "@/slices/TextSection";
 import ImageWithText from "@/slices/ImageWithText";
 import Accordion from "@/slices/Accordion";
 import Image from "@/slices/Image";
+import Partners from "@/slices/Partners";
 export { HeroSection };
 
 export const components = {
@@ -14,5 +15,6 @@ export const components = {
 	illustration_collection: IllustrationCollection,
 	image_with_text: ImageWithText,
 	accordian: Accordion,
+	partners: Partners,
 	image: Image,
 };

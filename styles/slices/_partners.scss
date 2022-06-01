@@ -1,0 +1,21 @@
+@use "utils/breakpoints";
+@use "utils/type";
+
+.partners {
+	margin: 64px auto 100px auto;
+	padding: 0px 20px;
+	max-width: 1100px;
+}
+
+.partners__title {
+	@include type.heading-two;
+	text-align: center;
+}
+
+.partners__items {
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	place-items: center;
+	grid-gap: 20px;
+}
