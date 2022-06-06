@@ -40,7 +40,7 @@ export default function EmbedWithText({ slice }) {
 						<iframe
 							title={title[0].text}
 							src={link.url}
-							frameborder="0"
+							frameBorder="0"
 						></iframe>
 					</div>
 				)}
