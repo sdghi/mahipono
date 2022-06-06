@@ -49,6 +49,7 @@
 
 .post__featured__link__title {
 	@include type.newspost-feed-title;
+	letter-spacing: 0;
 }
 
 .post__meta {
