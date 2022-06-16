@@ -26,3 +26,27 @@ p:empty {
 p a {
 	color: colors.$yellow-200;
 }
+
+h1 {
+	@include type.heading-one;
+}
+
+h2 {
+	@include type.heading-two;
+}
+
+h3 {
+	@include type.heading-three;
+}
+
+h4 {
+	@include type.heading-four;
+}
+
+h5 {
+	@include type.heading-five;
+}
+
+h6 {
+	@include type.heading-six;
+}

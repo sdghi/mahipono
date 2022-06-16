@@ -36,25 +36,32 @@
 
 	@include breakpoints.desktop {
 		--font-size: 36px;
-		--line-height: 43px;
+		--line-height: 32px;
 	}
 }
 
 @mixin heading-three {
 	--font-size: 17px;
 	--line-height: 28px;
-	@include type(var(--font-size), var(--line-height), 0.15em, 700);
+	@include type(var(--font-size), var(--line-height), 0.04em, 700);
 	font-family: var(--font-heading);
 
 	@include breakpoints.laptop {
-		--font-size: 23px;
+		--font-size: 28px;
 		--line-height: 32px;
 	}
 }
 
 @mixin heading-four {
-	@include type(24px, 29px, 0.15em, 700);
-	text-transform: uppercase;
+	@include type(20px, 28px, 0.04em, 700);
+}
+
+@mixin heading-five {
+	@include type(17px, 28px, 0.04em, 700);
+}
+
+@mixin heading-six {
+	@include type(14px, 28px, 0.04em, 700);
 }
 
 @mixin eyebrow {
