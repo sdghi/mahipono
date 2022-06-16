@@ -1,7 +1,11 @@
 import { PrismicLink } from "@prismicio/react";
 import getClassNames from "@/helpers/getClassNames";
 
-export default function MobileNavigation({ isMobileNavActive, navigation }) {
+export default function MobileNavigation({
+	isMobileNavActive,
+	navigation,
+	toggleMobileNav,
+}) {
 	const classNames = getClassNames("mobile-navigation", {
 		visible: isMobileNavActive,
 	});
@@ -14,6 +18,7 @@ export default function MobileNavigation({ isMobileNavActive, navigation }) {
 						<PrismicLink
 							field={item.primary.link}
 							className="mobile-navigation__items__item__link"
+							onClick={toggleMobileNav}
 						>
 							{item.primary.label}
 						</PrismicLink>

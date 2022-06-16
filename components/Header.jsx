@@ -29,6 +29,7 @@ export default function Header({ navigation }) {
 				<MobileNavigation
 					isMobileNavActive={isMobileNavActive}
 					navigation={navigation}
+					toggleMobileNav={toggleMobileNav}
 				/>
 			</header>
 		</>
