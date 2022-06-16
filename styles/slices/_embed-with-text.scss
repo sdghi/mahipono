@@ -29,15 +29,17 @@
 }
 
 .embed-with-text__embed-container {
-	flex-basis: 66.66%;
+	width: 100%;
+	height: 100%;
 }
 
 .embed-with-text__embed-container iframe {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
+	display: block;
 	min-height: 500px;
 	max-height: 741px;
+	width: 1px;
+	min-width: 100%;
+	height: 100%;
 }
 
 .embed-with-text__main {
