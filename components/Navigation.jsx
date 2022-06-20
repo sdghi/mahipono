@@ -1,11 +1,17 @@
-import { PrismicLink, PrismicText } from "@prismicio/react";
+import { PrismicLink } from "@prismicio/react";
+import getClassNames from "@/helpers/getClassNames";
 
 export default function Navigation({ navigation }) {
 	return (
 		<nav className="navigation">
 			<ul className="navigation__items">
 				{navigation.map((item, index) => (
-					<li className="navigation__items__item" key={index}>
+					<li
+						className={getClassNames("navigation__items__item", {
+							"is-button": item.primary.type === "button",
+						})}
+						key={index}
+					>
 						<PrismicLink
 							field={item.primary.link}
 							className="navigation__items__item__link"

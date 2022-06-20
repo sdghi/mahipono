@@ -1,4 +1,5 @@
 @use "utils/breakpoints";
+@use "utils/components";
 @use "utils/colors";
 @use "utils/easings";
 @use "utils/type";
@@ -33,4 +34,10 @@
 	&:hover {
 		--text-color: #{colors.$yellow-200};
 	}
+}
+
+.navigation__items__item--is-button-true .navigation__items__item__link {
+	@include components.button;
+	padding: 10px 15px;
+	font-size: 13px;
 }
