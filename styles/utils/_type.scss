@@ -10,33 +10,27 @@
 }
 
 @mixin heading-one {
-	--font-size: 20px;
+	--font-size: 30px;
 	@include type(var(--font-size), 1, 0.04em);
 	font-family: var(--font-heading);
 
 	@include breakpoints.tablet {
 		--font-size: 60px;
 	}
-
-	@include breakpoints.desktop {
-		--font-size: 80px;
-	}
 }
 
 @mixin heading-two {
 	--font-size: 20px;
-	--line-height: 28px;
+	--line-height: 1;
 	@include type(var(--font-size), var(--line-height), 0.04em);
 	font-family: var(--font-heading);
 
 	@include breakpoints.laptop {
 		--font-size: 28px;
-		--line-height: 32px;
 	}
 
 	@include breakpoints.desktop {
 		--font-size: 36px;
-		--line-height: 32px;
 	}
 }
 
@@ -48,20 +42,20 @@
 
 	@include breakpoints.laptop {
 		--font-size: 28px;
-		--line-height: 32px;
+		--line-height: 30px;
 	}
 }
 
 @mixin heading-four {
-	@include type(20px, 28px, 0.04em, 700);
+	@include type(20px, 24px, 0.04em, 700);
 }
 
 @mixin heading-five {
-	@include type(17px, 28px, 0.04em, 700);
+	@include type(17px, 20px, 0.04em, 700);
 }
 
 @mixin heading-six {
-	@include type(14px, 28px, 0.04em, 700);
+	@include type(14px, 18px, 0.04em, 700);
 }
 
 @mixin eyebrow {
