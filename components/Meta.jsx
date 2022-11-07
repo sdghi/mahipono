@@ -3,15 +3,16 @@ import Head from "next/head";
 export default function Meta({ title }) {
 	return (
 		<Head>
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-218243418-1"></script>
-			<script>
- 			 window.dataLayer = window.dataLayer || [];
- 			 function gtag(){
-			 dataLayer.push(arguments)
-			 }
- 			 gtag('js', new Date());
+			<script async strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=UA-218243418-1">
+				{` 
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){
+				dataLayer.push(arguments)
+				}
+				gtag('js', new Date());
 
-  			gtag('config', 'UA-218243418-1');
+				gtag('config', 'UA-218243418-1'); 
+				`}
 			</script>
 
 			<title>{title} | Mahipono</title>
