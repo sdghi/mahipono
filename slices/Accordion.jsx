@@ -20,7 +20,10 @@ export default function Accordion({ slice }) {
 								/>
 							</summary>
 							<div className="accordion__items__item__answer">
-								<PrismicRichText field={answer} />
+								<PrismicRichText field={answer} 
+								components={{
+									paragraph: ({children}) => <p>{children}</p>
+								}}/>
 							</div>
 						</details>
 					))}
