@@ -14,8 +14,8 @@ export default function PostTextSnippet({ post, prefix }) {
 				<div className="post__meta">
 					<div className="post__published">
 						{formatDate(post.data.release_date)}
-						{post.data.source[0] &&
-							` | ${post.data.source[0].text}`}
+						{/* {post.data.source[0] &&
+							` | ${post.data.source[0].text}`} */}
 					</div>
 					{post.tags && (
 						<div className="post__tags">
