@@ -1,5 +1,6 @@
 import { PrismicText, PrismicLink } from "@prismicio/react";
 import formatDate from "@/helpers/formatDate";
+import formatPostSource from "@/helpers/formatPostSource";
 import Link from "next/link";
 
 export default function PostTextSnippet({ post, prefix }) {
@@ -14,8 +15,7 @@ export default function PostTextSnippet({ post, prefix }) {
 				<div className="post__meta">
 					<div className="post__published">
 						{formatDate(post.data.release_date)}
-						{/* {post.data.source[0] &&
-							` | ${post.data.source[0].text}`} */}
+						{formatPostSource(post.data.source)}
 					</div>
 					{post.tags && (
 						<div className="post__tags">
