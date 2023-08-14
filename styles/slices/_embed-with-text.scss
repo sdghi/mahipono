@@ -22,8 +22,9 @@
 }
 
 .embed-with-text__wrapper {
+	display: flex;
+	flex-direction: column-reverse;
 	@include breakpoints.laptop {
-		display: flex;
 		flex-direction: var(--flex-direction);
 	}
 }
@@ -55,7 +56,10 @@
 	@include helpers.push-auto;
 	max-width: 456px;
 	text-align: center;
-	padding: 20px;
+	padding: 50px;
+	@include breakpoints.laptop {
+		padding: 20px;
+	}
 }
 
 .embed-with-text__content__title {

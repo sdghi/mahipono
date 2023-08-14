@@ -26,6 +26,8 @@
 		display: flex;
 		flex-direction: var(--flex-direction);
 	}
+	display: flex;
+	flex-direction: column-reverse;
 }
 
 .iwt__image-container {

@@ -1,8 +1,10 @@
-import { PrismicRichText } from "@prismicio/react";
+import { PrismicRichText, PrismicLink } from "@prismicio/react";
 import getClassNames from "@/helpers/getClassNames";
 
 export default function EmbedWithText({ slice }) {
 	const {
+		cta_content,
+		cta_link,
 		embed_placement,
 		embed,
 		link,
@@ -26,6 +28,14 @@ export default function EmbedWithText({ slice }) {
 						<div className="embed-with-text__content__body">
 							<PrismicRichText field={text_content} />
 						</div>
+						{cta_content[0] && (
+							<PrismicLink
+								className="iwt__content__link"
+								field={cta_link}
+							>
+								{cta_content[0].text}
+							</PrismicLink>
+						)}
 					</div>
 				</div>
 				{embed.html && (
