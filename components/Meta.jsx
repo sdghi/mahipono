@@ -3,7 +3,6 @@ import Head from "next/head";
 export default function Meta({ title }) {
 	return (
 		<Head>
-			{/* Google tag (gtag.js) */}
 			<script async strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-349SVR4H7K"></script>
 			<script id="google-analytics" strategy="afterInteractive">
 				{`
