@@ -3,17 +3,15 @@ import Head from "next/head";
 export default function Meta({ title }) {
 	return (
 		<Head>
-			<script async strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=UA-218243418-1">
-			</script>
+			{/* Google tag (gtag.js) */}
+			<script async strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-349SVR4H7K"></script>
 			<script id="google-analytics" strategy="afterInteractive">
-			{` 
+				{`
 				window.dataLayer = window.dataLayer || [];
-				function gtag(){
-				dataLayer.push(arguments)
-				}
+				function gtag(){dataLayer.push(arguments);}
 				gtag('js', new Date());
 
-				gtag('config', 'UA-218243418-1'); 
+				gtag('config', 'G-349SVR4H7K');
 				`}
 			</script>
 
