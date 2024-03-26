@@ -1,9 +1,17 @@
-import { createClient } from "../../prismic";
+import { createClient, slugify } from "../../prismic";
 import Meta from "@/components/Meta";
 import PostTextSnippet from "@/components/PostTextSnippet";
 
 export default function News({ page, posts }) {
   const { featured_post, page_title } = page.data;
+
+  // Edge-case to ensure the featured post has the correct
+  // href in the link
+  if (!featured_post.slug || featured_post.slug.length === 1) {
+    featured_post.slug = slugify(featured_post.data.title[0].text);
+  }
+
+
   return (
     <>
       <Meta title="News & Updates" />
