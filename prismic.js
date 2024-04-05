@@ -25,7 +25,7 @@ export function linkResolver(doc) {
       let slug = doc.slug;
       if (!doc.slug) {
         slug = doc.uid;
-      } else if (!doc.uid) {
+      } else if (!doc.uid && !doc.slug) {
         // If there's no slug value, convert the title
         // to a slug value
         const title = doc?.data.title[0].text;
