@@ -22,10 +22,12 @@ export function linkResolver(doc) {
       if (doc.uid === "home") return "/";
       return `/${doc.uid}`;
     case "post":
-      let slug = doc.uid;
-      // If there's no slug value, convert the title
-      // to a slug value
-      if (!slug) {
+      let slug = doc.slug;
+      if (!doc.slug) {
+        slug = doc.uid;
+      } else if (!doc.uid) {
+        // If there's no slug value, convert the title
+        // to a slug value
         const title = doc?.data.title[0].text;
         slug = slugify(title);
       }
