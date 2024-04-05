@@ -28,7 +28,7 @@ export function linkResolver(doc) {
       if (doc.uid) {
         return `/news-and-updates/${doc.uid}`;
       }
-      // If there's no slug value, convert the title
+      // If there's no slug value or uid value, convert the title
       // to a slug value
       const title = doc?.data.title[0].text;
       const slug = slugify(title);
