@@ -14,27 +14,12 @@ export default function Page({ page }) {
 	);
 }
 
-export async function getStaticProps({ params, previewData }) {
+export async function getServerSideProps({ params, previewData }) {
 	const client = createClient({ previewData });
 
 	const page = await client.getByUID("page", params.page);
 
 	return {
 		props: { page },
-	};
-}
-
-export async function getStaticPaths() {
-	const client = createClient();
-	const documents = await client.getAllByType("page");
-	const filteredDocs = documents.filter((doc) => {
-		return doc.uid !== "home";
-	});
-
-	const paths = filteredDocs.map((doc) => prismicH.asLink(doc, linkResolver));
-
-	return {
-		paths,
-		fallback: false,
 	};
 }

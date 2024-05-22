@@ -58,7 +58,7 @@ export default function News({ page, posts }) {
   );
 }
 
-export async function getStaticProps({ previewData }) {
+export async function getServerSideProps({ previewData }) {
   const client = createClient({ previewData });
 
   const page = await client.getSingle("news_and_updates", {

@@ -13,7 +13,7 @@ export default function Home({ page }) {
 	);
 }
 
-export async function getStaticProps({ previewData }) {
+export async function getServerSideProps({ previewData }) {
 	const client = createClient({ previewData });
 
 	const page = await client.getByUID("page", "home");

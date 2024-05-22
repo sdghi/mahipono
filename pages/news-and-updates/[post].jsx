@@ -61,7 +61,7 @@ export default function Post({ post, next }) {
   );
 }
 
-export async function getStaticProps({ params, previewData }) {
+export async function getServerSideProps({ params, previewData }) {
   const client = createClient({ previewData });
 
   const posts = await client.getAllByType("post");
@@ -84,14 +84,4 @@ export async function getStaticProps({ params, previewData }) {
   };
 }
 
-export async function getStaticPaths() {
-  const client = createClient();
-  const documents = await client.getAllByType("post");
 
-  const paths = documents.map((doc) => prismicH.asLink(doc, linkResolver));
-
-  return {
-    paths,
-    fallback: false,
-  };
-}

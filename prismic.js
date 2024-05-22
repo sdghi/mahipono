@@ -34,12 +34,12 @@ export function linkResolver(doc) {
       const slug = slugify(title);
       return `/news-and-updates/${slug}`;
     default:
-			if (doc.slug) {
-				return `/${doc.slug}`;
-			}
-			if (doc.uid) {
-				return `/${doc.uid}`;
-			}
+			return `/${doc.uid}`;
+			// if (doc.slug) {
+			// 	return `/${doc.slug}`;
+			// }
+			// if (doc.uid) {
+			// }
   }
 }
 
