@@ -41,3 +41,38 @@
 	padding: 10px 15px;
 	font-size: 13px;
 }
+
+.navigation__items__item--is-subnav-true {
+	padding-bottom: 13px;
+	margin-bottom: -26px;
+}
+
+.navigation__items__item--is-subnav-true .navigation__items__item__subnav {
+	display: none;
+	opacity: 0;
+	position: relative;
+	transition: all 0.5s 1s;
+}
+
+.navigation__items__item--is-subnav-true:hover .navigation__items__item__subnav {
+	display: block;
+	opacity: 1;
+	position: absolute;
+	top: 100%;
+	background: colors.$brown-200;
+	padding: 8px 15px 12px;
+	transition: all 0.5 1s;
+}
+
+.navigation__items__item__subnav__item
+
+.navigation__items__item__subnav__item__link {
+	--text-color: #{colors.$white};
+	@include type.link-small;
+	text-decoration: none;
+	transition: color 0.2s easings.$ease-in-out-sine;
+
+	&:hover {
+		--text-color: #{colors.$yellow-200};
+	}
+}
