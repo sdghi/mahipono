@@ -23,7 +23,9 @@ export default function MobileNavigation({
 									<li className="mobile-navigation__items__item__details__list__item" key={subIndex}>
 										<PrismicLink 
 										field={subitem.link}
-										className="mobile-navigation__items__item__details__list__item__link">
+										className="mobile-navigation__items__item__details__list__item__link"
+										onClick={toggleMobileNav}
+										>
 											{subitem.label}
 										</PrismicLink>
 									</li>
