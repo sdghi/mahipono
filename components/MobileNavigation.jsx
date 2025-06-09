@@ -20,7 +20,7 @@ export default function MobileNavigation({
 								<summary className="mobile-navigation__items__item__details__summary">{item.primary.label} <span className="mobile-navigation__items__item__details__expand-icon"></span></summary>
 								<ul className="mobile-navigation__items__item__details__list">
 									{item.items.map((subitem, subIndex) => (
-									<li className="mobile-navigation__items__item__details__list__item">
+									<li className="mobile-navigation__items__item__details__list__item" key={subIndex}>
 										<PrismicLink 
 										field={subitem.link}
 										className="mobile-navigation__items__item__details__list__item__link">
