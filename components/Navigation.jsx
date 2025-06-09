@@ -2,10 +2,6 @@ import { PrismicLink } from "@prismicio/react";
 import getClassNames from "@/helpers/getClassNames";
 
 export default function Navigation({ navigation }) {
-	// console.log(navigation)
-	navigation.map((item) => (
-		console.log(item.items)
-	))
 	
 	return (
 		<nav className="navigation">
