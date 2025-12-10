@@ -12,14 +12,14 @@ export default function Header({ navigation }) {
 	}
 
 	return (
-		<>
-			<header className="header">
+        <>
+            <header className="header">
 				<div className="header__wrapper">
-					<Link href="/">
-						<a arial-label="Go to the homepage">
-							<img src="/site-branding.svg" role="presentation" />
-						</a>
-					</Link>
+					<Link href="/" arial-label="Go to the homepage">
+
+                        <img src="/site-branding.svg" role="presentation" />
+
+                    </Link>
 					<MobileNavToggle
 						toggleMobileNav={toggleMobileNav}
 						isMobileNavActive={isMobileNavActive}
@@ -32,6 +32,6 @@ export default function Header({ navigation }) {
 					toggleMobileNav={toggleMobileNav}
 				/>
 			</header>
-		</>
-	);
+        </>
+    );
 }

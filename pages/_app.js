@@ -9,21 +9,21 @@ import "styles/styles.scss";
 
 export default function App({ Component, pageProps, navigation }) {
 	return (
-		<PrismicProvider
+        <PrismicProvider
 			linkResolver={linkResolver}
 			internalLinkComponent={({ href, children, ...props }) => (
-				<Link href={href}>
-					<a {...props}>{children}</a>
+				<Link href={href} {...props}>
+					{children}
 				</Link>
 			)}
 		>
-			<PrismicPreview repositoryName={repositoryName}>
+            <PrismicPreview repositoryName={repositoryName}>
 				<Header navigation={navigation} />
 				<Component {...pageProps} />
 				<Footer />
 			</PrismicPreview>
-		</PrismicProvider>
-	);
+        </PrismicProvider>
+    );
 }
 
 App.getInitialProps = async ({ previewData }) => {

@@ -35,8 +35,8 @@ export default function Post({ post, next }) {
               <p className="article__tags__title">Tags:</p>
               <div className="article__tags__container">
                 {post.tags.map((tag, i) => (
-                  <Link key={i} href={`/tags/${tag}`}>
-                    <a className="article__tags__tag">{tag}</a>
+                  <Link key={i} href={`/tags/${tag}`} className="article__tags__tag">
+                    {tag}
                   </Link>
                 ))}
               </div>
