@@ -7,7 +7,7 @@ export default function PostTextSnippet({ post, prefix }) {
 	return (
         <div className={`${prefix} post`}>
             <div className="post__content">
-				<PrismicLink field={post} className="post__featured__link">
+				<PrismicLink document={post} className="post__featured__link">
 					<h2 className="post__featured__link__title">
 						{post.data.title[0].text}
 					</h2>

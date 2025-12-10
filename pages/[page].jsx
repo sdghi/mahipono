@@ -1,5 +1,5 @@
 import { SliceZone } from "@prismicio/react";
-import * as prismicH from "@prismicio/helpers";
+import * as prismicH from "@prismicio/client";
 import { createClient, linkResolver } from "../prismic";
 import Meta from "@/components/Meta";
 import { components } from "@/slices/index";
