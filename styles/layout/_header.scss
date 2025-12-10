@@ -1,6 +1,6 @@
-@use "utils/breakpoints";
-@use "utils/colors";
-@use "utils/easings";
+@use "../utils/breakpoints";
+@use "../utils/colors";
+@use "../utils/easings";
 
 .header {
 	--header-padding: 13px 15px;

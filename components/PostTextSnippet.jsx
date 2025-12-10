@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function PostTextSnippet({ post, prefix }) {
 	return (
-		<div className={`${prefix} post`}>
-			<div className="post__content">
-				<PrismicLink field={post} className="post__featured__link">
+        <div className={`${prefix} post`}>
+            <div className="post__content">
+				<PrismicLink document={post} className="post__featured__link">
 					<h2 className="post__featured__link__title">
 						{post.data.title[0].text}
 					</h2>
@@ -20,8 +20,8 @@ export default function PostTextSnippet({ post, prefix }) {
 					{post.tags && (
 						<div className="post__tags">
 							{post.tags.map((tag, i) => (
-								<Link key={i} href={`/tags/${tag}`}>
-									<a className="post__tags__tag">{tag}</a>
+								<Link key={i} href={`/tags/${tag}`} className="post__tags__tag">
+									{tag}
 								</Link>
 							))}
 						</div>
@@ -31,11 +31,11 @@ export default function PostTextSnippet({ post, prefix }) {
 					<PrismicText field={post.data.description} />
 				</div>
 			</div>
-			<img
+            <img
 				className="post__image"
 				src={post.data.featured_image.url}
 				alt={post.data.featured_image.alt}
 			/>
-		</div>
-	);
+        </div>
+    );
 }

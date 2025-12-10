@@ -1,7 +1,7 @@
-@use "utils/breakpoints";
-@use "utils/colors";
-@use "utils/easings";
-@use "utils/type";
+@use "../utils/breakpoints";
+@use "../utils/colors";
+@use "../utils/easings";
+@use "../utils/type";
 
 .mobile-navigation {
 	--translate: translateY(-100%);

@@ -1,6 +1,6 @@
-@use "utils/breakpoints";
-@use "utils/colors";
-@use "utils/type";
+@use "../utils/breakpoints";
+@use "../utils/colors";
+@use "../utils/type";
 
 .footer__banner {
 	background: colors.$yellow-300;

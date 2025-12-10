@@ -1,7 +1,7 @@
-@use "utils/breakpoints";
-@use "utils/colors";
-@use "utils/helpers";
-@use "utils/type";
+@use "../utils/breakpoints";
+@use "../utils/colors";
+@use "../utils/helpers";
+@use "../utils/type";
 
 .page-title {
 	@include type.heading-two;

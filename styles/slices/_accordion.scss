@@ -1,8 +1,8 @@
-@use "utils/breakpoints";
-@use "utils/colors";
-@use "utils/easings";
-@use "utils/helpers";
-@use "utils/type";
+@use "../utils/breakpoints";
+@use "../utils/colors";
+@use "../utils/easings";
+@use "../utils/helpers";
+@use "../utils/type";
 
 .accordion {
 	position: relative;

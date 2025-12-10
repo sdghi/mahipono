@@ -1,6 +1,6 @@
-@use "utils/colors";
-@use "utils/helpers";
-@use "utils/type";
+@use "../utils/colors";
+@use "../utils/helpers";
+@use "../utils/type";
 
 .article__hero {
 	@include helpers.push-auto;

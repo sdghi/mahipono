@@ -1,8 +1,8 @@
-@use "utils/breakpoints";
-@use "utils/components";
-@use "utils/colors";
-@use "utils/easings";
-@use "utils/type";
+@use "../utils/breakpoints";
+@use "../utils/components";
+@use "../utils/colors";
+@use "../utils/easings";
+@use "../utils/type";
 
 .navigation {
 	display: none;

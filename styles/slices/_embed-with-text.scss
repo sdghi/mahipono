@@ -1,8 +1,8 @@
-@use "utils/breakpoints";
-@use "utils/colors";
-@use "utils/components";
-@use "utils/type";
-@use "utils/helpers";
+@use "../utils/breakpoints";
+@use "../utils/colors";
+@use "../utils/components";
+@use "../utils/type";
+@use "../utils/helpers";
 
 .embed-with-text {
 	--content-background: #{colors.$green-300};
