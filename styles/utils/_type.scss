@@ -1,5 +1,5 @@
-@use "utils/breakpoints";
-@use "utils/colors";
+@use "../utils/breakpoints";
+@use "../utils/colors";
 
 @mixin type($size, $line-height, $letter-spacing: 0, $font-weight: 400) {
 	font-size: $size;

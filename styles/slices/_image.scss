@@ -1,5 +1,5 @@
-@use "utils/helpers";
-@use "utils/type";
+@use "../utils/helpers";
+@use "../utils/type";
 
 .image {
 	@include helpers.push-auto;

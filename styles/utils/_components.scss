@@ -1,7 +1,7 @@
-@use "utils/breakpoints";
-@use "utils/colors";
-@use "utils/type";
-@use "utils/easings";
+@use "../utils/breakpoints";
+@use "../utils/colors";
+@use "../utils/type";
+@use "../utils/easings";
 
 @mixin button {
 	--button-padding: 20px 12px;
