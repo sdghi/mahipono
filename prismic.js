@@ -9,9 +9,11 @@ export function slugify(str) {
   str = str.replace(/^\s+|\s+$/g, ""); // trim leading/trailing white space
   str = str.toLowerCase(); // convert string to lowercase
   str = str
-    .replace(/[^a-z0-9 -]/g, "") // remove any non-alphanumeric characters
+    .replace(/[ʻ']/g, "") // remove Hawaiian okina characters (both Unicode and apostrophe variants)
+    .replace(/%CA%BB/gi, "") // remove URL-encoded Hawaiian okina characters
+    .replace(/[^a-z0-9 -]/g, "") // remove any remaining non-alphanumeric characters
     .replace(/\s+/g, "-") // replace spaces with hyphens
-    .replace(/-+/g, "-"); // remove consecutive hyphens
+    .replace(/-+/g, "-") // remove consecutive hyphens
   return str;
 }
 
@@ -23,10 +25,10 @@ export function linkResolver(doc) {
       return `/${doc.uid}`;
     case "post":
       if (doc.slug) {
-        return `/news-and-updates/${doc.slug}`;
+        return `/news-and-updates/${slugify(doc.slug)}`;
       } 
       if (doc.uid) {
-        return `/news-and-updates/${doc.uid}`;
+        return `/news-and-updates/${slugify(doc.uid)}`;
       }
       // If there's no slug value or uid value, convert the title
       // to a slug value
